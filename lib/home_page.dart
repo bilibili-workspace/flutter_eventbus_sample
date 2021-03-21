@@ -14,7 +14,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with HttpErrorListener {
+class _MyHomePageState extends State<MyHomePage> implements HttpErrorListener {
   int _counter = 0;
 
   @override
@@ -24,7 +24,6 @@ class _MyHomePageState extends State<MyHomePage> with HttpErrorListener {
   }
 
   void _incrementCounter() {
-    print("sadhasjhjashjkashjk");
     eventBus.fire(HttpErrorEvent(404, "找不到网页"));
     setState(() {
       _counter++;
@@ -37,19 +36,8 @@ class _MyHomePageState extends State<MyHomePage> with HttpErrorListener {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: Text(
+        'flutter event bus sample',
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
