@@ -17,10 +17,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> with HttpErrorListener {
   int _counter = 0;
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   void _incrementCounter() {
+    print("sadhasjhjashjkashjk");
+    eventBus.fire(HttpErrorEvent(404, "找不到网页"));
     setState(() {
       _counter++;
-      eventBus.fire(HttpErrorEvent(404, "找不到网页"));
     });
   }
 
