@@ -14,7 +14,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> implements HttpErrorListener {
+class _MyHomePageState extends State<MyHomePage> with HttpErrorListener {
   int _counter = 0;
 
   @override
