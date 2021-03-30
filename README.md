@@ -12,6 +12,13 @@
  Engine • revision a1440ca392
  Tools • Dart 2.10.3
 
+# dependencies
+
+```html
+  event_bus:  ^1.1.1
+  fluttertoast: ^7.1.1
+```
+
 # 參考
 
 - [Flutter中使用event_bus进行事件广播和事件监听](https://cloud.tencent.com/developer/article/1520801)
